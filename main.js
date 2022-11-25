@@ -310,21 +310,21 @@ function searchFunction() {
  *  ja lisää sen perään hakutuloksesta saadun henkilön nimen.
  *
  * Haetaan APIn tulos await fetch-komennolla ja muotoillaan tulos JSON-muotoon .json()-komennolla.
- * Sitten lähetetään tulos parseJSON-funktioon.
+ * Sitten lähetetään tulos showQuote-funktioon.
  **/
 async function loadJSON() {
   if (character != undefined) {
     var url = `${linkki}` + character;
     const response = await fetch(url);
     const cleaned = await response.json();
-    parseJSON(cleaned);
+    showQuote(cleaned);
   }
 }
 
 /** Haetaan "results"-div, ja lisätään sinne haluttu tulos käyttämällä "cleaned"-tuloksen perässä halutun JSON-kohdan nimeä.
  * Tässä esimerkiksi käytettiin "sentence" ja "character.name".
  **/
-async function parseJSON(cleaned) {
+async function showQuote(cleaned) {
   document.getElementById("search").value = "";
   document.getElementById("results").innerHTML = `
     <div class = "quotes">
