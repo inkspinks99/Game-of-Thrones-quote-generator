@@ -128,9 +128,9 @@ function showCharacters() {
       character = null;
       var name = document.getElementById("gameOfThrones").value;
       alert(
-        'Hakemaasi henkilöä  "' +
+        'The character "' +
           name +
-          '" ei löytynyt. Ole hyvä ja valitse nimi alasvetovalikosta tai etsi hakusanalla.'
+          '" could not be found. Please use the dropdown or enter a new keyword.'
       );
       document.getElementById("gameOfThrones").value = "";
   }
@@ -297,9 +297,9 @@ function searchFunction() {
       character = null;
       var name = document.getElementById("search").value;
       alert(
-        'Hakemaasi henkilöä  "' +
+        'The character "' +
           name +
-          '" ei löytynyt. Ole hyvä ja valitse nimi alasvetovalikosta tai etsi hakusanalla.'
+          '" could not be found. Please use the dropdown or enter a new keyword.'
       );
       document.getElementById("search").value = "";
   }
@@ -325,6 +325,7 @@ async function loadJSON() {
  * Tässä esimerkiksi käytettiin "sentence" ja "character.name".
  **/
 async function parseJSON(cleaned) {
+  document.getElementById("search").value = "";
   document.getElementById("results").innerHTML = `
     <div class = "quotes">
         <h3 class = "quote">${cleaned.sentence}</h3>
