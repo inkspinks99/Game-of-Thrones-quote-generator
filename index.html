@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <title>Game of Thrones quoteja</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1 id="heading"></h1>
+        <form name="characterList" id="characterList" >
+            Choose a character:
+            <input id="gameOfThrones" list="characters" name ="characters" onchange="showCharacters()">
+            <datalist id="characters">
+                <option value="Jon Snow"></option>
+                <option value="Sansa Stark"></option>
+                <option value="Ned Stark"></option>
+                <option value="Catelyn Stark"></option>
+                <option value="Jaime Lannister"></option>
+                <option value="Tyrion Lannister"></option>
+                <option value="Cersei Lannister"></option>
+                <option value="Joffrey Baratheon"></option>
+                <option value="Aerys Targaryen"></option>
+                <option value="Aemon Targaryen"></option>
+                <option value="Daenerys Targaryen"></option>
+                <option value="Tywin Lannister"></option>
+                <option value="Ramsay Bolton"></option>
+                <option value="Arya Stark"></option>
+                <option value="Robert Baratheon"></option>
+                <option value="Theon Greyjoy"></option>
+                <option value="Samwell Tarly"></option>
+                <option value="Lord Varys"></option>
+                <option value="Bran Stark"></option>
+                <option value="Brienne of Tharth"></option>
+                <option value="Petyr Baelish"></option>
+                <option value="Tormund"></option>
+                <option value="Melisandre"></option>
+                <option value="Olenna Tyrell"></option>
+                <option value="Mance Rayder"></option>
+                <option value="Ygritte"></option>
+            </datalist>
+            <br><br>
+            Or search with a searchword:
+            <input type="text" id="search">
+            <input type ="button" id="searchButton" value="search" onclick="searchFunction()">
+            <br><br>
+        </form>
+        <div id="results"></div>
+        <script src="main.js"></script>
+    </body>
+</html> 
